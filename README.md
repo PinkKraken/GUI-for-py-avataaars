@@ -11,7 +11,7 @@ This application provides you a graphical user interface for py-avataaars which 
 <ul>
 <li>You must have a working python3 installation and install py-avataaars using pip (see the py-avataaars repository for further instructions)</li>
 <li>You will need to install the GTK3 libraries - the installer for the MS Windows version can be found in the root folder</li>
-<li>Download the GUI-FOR-PY-AVATAAARS folder and move it where you want (it can be your own project folder)</li>
+<li>Download the "GUI-FOR-PY-AVATAAARS 1.0.0" folder and move it where you want (it can be your own project folder)</li>
 <li>You can run the GFPA.py script directly from the python terminal and the GUI will appear</li>
 <li>In addition, you can import it into your own project or modify it to your liking :-)</li>
 </ul>
