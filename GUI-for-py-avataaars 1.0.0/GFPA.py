@@ -308,10 +308,91 @@ class Methods():
         Methods.Preview()
 
     #-Nose type
+    #* Prepared for more Nose_type variants in the future updates of py-avataaars *
+    #def Nose_type(move):
+    #    global i_nose_type
+    #    if move == "back":
+    #        if i_nose_type > 0:
+    #            i_nose_type -= 1
+    #        else:
+    #            i_nose_type = 1
+    #    elif move == "next":
+    #        if i_nose_type < 1:
+    #            i_nose_type += 1
+    #        else:
+    #            i_nose_type = 0
+    #    Methods.Select()
+    #    Label11.config(text = custom_nose_type)
+    #    Methods.Preview()
+
     #-Accessories type
+    def Accessories_type(move):
+        global i_accessories_type
+        if move == "back":
+            if i_accessories_type > 0:
+                i_accessories_type -= 1
+            else:
+                i_accessories_type = 6
+        elif move == "next":
+            if i_accessories_type < 6:
+                i_accessories_type += 1
+            else:
+                i_accessories_type = 0
+        Methods.Select()
+        Label12.config(text = custom_accessories_type)
+        Methods.Preview()
+
     #-Clothe type
+    def Clothe_type(move):
+        global i_clothe_type
+        if move == "back":
+            if i_clothe_type > 0:
+                i_clothe_type -= 1
+            else:
+                i_clothe_type = 8
+        elif move == "next":
+            if i_clothe_type < 8:
+                i_clothe_type += 1
+            else:
+                i_clothe_type = 0
+        Methods.Select()
+        Label13.config(text = custom_clothe_type)
+        Methods.Preview()
+
     #-Clothe color
+    def Clothe_color(move):
+        global i_clothe_color
+        if move == "back":
+            if i_clothe_color > 0:
+                i_clothe_color -= 1
+            else:
+                i_clothe_color = 14
+        elif move == "next":
+            if i_clothe_color < 14:
+                i_clothe_color += 1
+            else:
+                i_clothe_color = 0
+        Methods.Select()
+        Label14.config(text = custom_clothe_color)
+        Methods.Preview()
+
     #-Clothe graphic type
+    def Clothe_graphic_type(move):
+        global i_clothe_graphic_type
+        if move == "back":
+            if i_clothe_graphic_type > 0:
+                i_clothe_graphic_type -= 1
+            else:
+                i_clothe_graphic_type = 10
+        elif move == "next":
+            if i_clothe_graphic_type < 10:
+                i_clothe_graphic_type += 1
+            else:
+                i_clothe_graphic_type = 0
+        Methods.Select()
+        Label15.config(text = custom_clothe_graphic_type)
+        Methods.Preview()
+
 
 mainWin = Tk()
 mainWin.geometry("900x600")
@@ -344,7 +425,7 @@ Description1.pack(fill=X)
 
 LeftFR1 = Frame(StyleFR)
 LeftFR1.pack(side=LEFT)
-ToolsButton1_1 = Button(LeftFR1, text="Back", font=("Courier New", 11, BOLD), borderwidth=3, pady=1, padx=5, command=lambda a="back":Methods.Style(a))
+ToolsButton1_1 = Button(LeftFR1, text="Back", font=("Courier New", 11, BOLD), borderwidth=3, pady=3, padx=5, command=lambda a="back":Methods.Style(a))
 ToolsButton1_1.pack(fill=X)
 
 LabelFR1 = Frame(StyleFR)
@@ -354,7 +435,7 @@ Label1.pack(fill=X)
 
 RightFR1 = Frame(StyleFR)
 RightFR1.pack(side=LEFT)
-ToolsButton1_2 = Button(RightFR1, text="Next", font=("Courier New", 11, BOLD), borderwidth=3, pady=1, padx=5, command=lambda a="next":Methods.Style(a))
+ToolsButton1_2 = Button(RightFR1, text="Next", font=("Courier New", 11, BOLD), borderwidth=3, pady=3, padx=5, command=lambda a="next":Methods.Style(a))
 ToolsButton1_2.pack(fill=X)
 
 #-Skin color
@@ -368,7 +449,7 @@ Description2.pack(fill=X)
 
 LeftFR2 = Frame(Skin_colorFR)
 LeftFR2.pack(side=LEFT)
-ToolsButton2_1 = Button(LeftFR2, text="Back", font=("Courier New", 11, BOLD), borderwidth=3, pady=1, padx=5, command=lambda a="back":Methods.Skin_color(a))
+ToolsButton2_1 = Button(LeftFR2, text="Back", font=("Courier New", 11, BOLD), borderwidth=3, pady=3, padx=5, command=lambda a="back":Methods.Skin_color(a))
 ToolsButton2_1.pack(fill=X)
 
 LabelFR2 = Frame(Skin_colorFR)
@@ -378,7 +459,7 @@ Label2.pack(fill=X)
 
 RightFR2 = Frame(Skin_colorFR)
 RightFR2.pack(side=LEFT)
-ToolsButton2_2 = Button(RightFR2, text="Next", font=("Courier New", 11, BOLD), borderwidth=3, pady=1, padx=5, command=lambda a="next":Methods.Skin_color(a))
+ToolsButton2_2 = Button(RightFR2, text="Next", font=("Courier New", 11, BOLD), borderwidth=3, pady=3, padx=5, command=lambda a="next":Methods.Skin_color(a))
 ToolsButton2_2.pack(fill=X)
 
 #-Hair color
@@ -392,7 +473,7 @@ Description3.pack(fill=X)
 
 LeftFR3 = Frame(Hair_colorFR)
 LeftFR3.pack(side=LEFT)
-ToolsButton3_1 = Button(LeftFR3, text="Back", font=("Courier New", 11, BOLD), borderwidth=3, pady=1, padx=5, command=lambda a="back":Methods.Hair_color(a))
+ToolsButton3_1 = Button(LeftFR3, text="Back", font=("Courier New", 11, BOLD), borderwidth=3, pady=3, padx=5, command=lambda a="back":Methods.Hair_color(a))
 ToolsButton3_1.pack(fill=X)
 
 LabelFR3 = Frame(Hair_colorFR)
@@ -402,7 +483,7 @@ Label3.pack(fill=X)
 
 RightFR3 = Frame(Hair_colorFR)
 RightFR3.pack(side=LEFT)
-ToolsButton3_2 = Button(RightFR3, text="Next", font=("Courier New", 11, BOLD), borderwidth=3, pady=1, padx=5, command=lambda a="next":Methods.Hair_color(a))
+ToolsButton3_2 = Button(RightFR3, text="Next", font=("Courier New", 11, BOLD), borderwidth=3, pady=3, padx=5, command=lambda a="next":Methods.Hair_color(a))
 ToolsButton3_2.pack(fill=X)
 
 #-Facial hair type
@@ -416,7 +497,7 @@ Description4.pack(fill=X)
 
 LeftFR4 = Frame(Facial_hair_typeFR)
 LeftFR4.pack(side=LEFT)
-ToolsButton4_1 = Button(LeftFR4, text="Back", font=("Courier New", 11, BOLD), borderwidth=3, pady=1, padx=5, command=lambda a="back":Methods.Facial_hair_type(a))
+ToolsButton4_1 = Button(LeftFR4, text="Back", font=("Courier New", 11, BOLD), borderwidth=3, pady=3, padx=5, command=lambda a="back":Methods.Facial_hair_type(a))
 ToolsButton4_1.pack(fill=X)
 
 LabelFR4 = Frame(Facial_hair_typeFR)
@@ -426,7 +507,7 @@ Label4.pack(fill=X)
 
 RightFR4 = Frame(Facial_hair_typeFR)
 RightFR4.pack(side=LEFT)
-ToolsButton4_2 = Button(RightFR4, text="Next", font=("Courier New", 11, BOLD), borderwidth=3, pady=1, padx=5, command=lambda a="next":Methods.Facial_hair_type(a))
+ToolsButton4_2 = Button(RightFR4, text="Next", font=("Courier New", 11, BOLD), borderwidth=3, pady=3, padx=5, command=lambda a="next":Methods.Facial_hair_type(a))
 ToolsButton4_2.pack(fill=X)
 
 #-Facial hair color
@@ -440,7 +521,7 @@ Description5.pack(fill=X)
 
 LeftFR5 = Frame(Facial_hair_colorFR)
 LeftFR5.pack(side=LEFT)
-ToolsButton5_1 = Button(LeftFR5, text="Back", font=("Courier New", 11, BOLD), borderwidth=3, pady=1, padx=5, command=lambda a="back":Methods.Facial_hair_color(a))
+ToolsButton5_1 = Button(LeftFR5, text="Back", font=("Courier New", 11, BOLD), borderwidth=3, pady=3, padx=5, command=lambda a="back":Methods.Facial_hair_color(a))
 ToolsButton5_1.pack(fill=X)
 
 LabelFR5 = Frame(Facial_hair_colorFR)
@@ -450,7 +531,7 @@ Label5.pack(fill=X)
 
 RightFR5 = Frame(Facial_hair_colorFR)
 RightFR5.pack(side=LEFT)
-ToolsButton5_2 = Button(RightFR5, text="Next", font=("Courier New", 11, BOLD), borderwidth=3, pady=1, padx=5, command=lambda a="next":Methods.Facial_hair_color(a))
+ToolsButton5_2 = Button(RightFR5, text="Next", font=("Courier New", 11, BOLD), borderwidth=3, pady=3, padx=5, command=lambda a="next":Methods.Facial_hair_color(a))
 ToolsButton5_2.pack(fill=X)
 
 #-Top type
@@ -464,7 +545,7 @@ Description6.pack(fill=X)
 
 LeftFR6 = Frame(Top_typeFR)
 LeftFR6.pack(side=LEFT)
-ToolsButton6_1 = Button(LeftFR6, text="Back", font=("Courier New", 11, BOLD), borderwidth=3, pady=1, padx=5, command=lambda a="back":Methods.Top_type(a))
+ToolsButton6_1 = Button(LeftFR6, text="Back", font=("Courier New", 11, BOLD), borderwidth=3, pady=3, padx=5, command=lambda a="back":Methods.Top_type(a))
 ToolsButton6_1.pack(fill=X)
 
 LabelFR6 = Frame(Top_typeFR)
@@ -474,7 +555,7 @@ Label6.pack(fill=X)
 
 RightFR6 = Frame(Top_typeFR)
 RightFR6.pack(side=LEFT)
-ToolsButton6_2 = Button(RightFR6, text="Next", font=("Courier New", 11, BOLD), borderwidth=3, pady=1, padx=5, command=lambda a="next":Methods.Top_type(a))
+ToolsButton6_2 = Button(RightFR6, text="Next", font=("Courier New", 11, BOLD), borderwidth=3, pady=3, padx=5, command=lambda a="next":Methods.Top_type(a))
 ToolsButton6_2.pack(fill=X)
 
 #-Hat color
@@ -488,7 +569,7 @@ Description7.pack(fill=X)
 
 LeftFR7 = Frame(Hat_colorFR)
 LeftFR7.pack(side=LEFT)
-ToolsButton7_1 = Button(LeftFR7, text="Back", font=("Courier New", 11, BOLD), borderwidth=3, pady=1, padx=5, command=lambda a="back":Methods.Hat_color(a))
+ToolsButton7_1 = Button(LeftFR7, text="Back", font=("Courier New", 11, BOLD), borderwidth=3, pady=3, padx=5, command=lambda a="back":Methods.Hat_color(a))
 ToolsButton7_1.pack(fill=X)
 
 LabelFR7 = Frame(Hat_colorFR)
@@ -498,7 +579,7 @@ Label7.pack(fill=X)
 
 RightFR7 = Frame(Hat_colorFR)
 RightFR7.pack(side=LEFT)
-ToolsButton7_2 = Button(RightFR7, text="Next", font=("Courier New", 11, BOLD), borderwidth=3, pady=1, padx=5, command=lambda a="next":Methods.Hat_color(a))
+ToolsButton7_2 = Button(RightFR7, text="Next", font=("Courier New", 11, BOLD), borderwidth=3, pady=3, padx=5, command=lambda a="next":Methods.Hat_color(a))
 ToolsButton7_2.pack(fill=X)
 
 #-Mouth type
@@ -512,7 +593,7 @@ Description8.pack(fill=X)
 
 LeftFR8 = Frame(Mouth_typeFR)
 LeftFR8.pack(side=LEFT)
-ToolsButton8_1 = Button(LeftFR8, text="Back", font=("Courier New", 11, BOLD), borderwidth=3, pady=1, padx=5, command=lambda a="back":Methods.Mouth_type(a))
+ToolsButton8_1 = Button(LeftFR8, text="Back", font=("Courier New", 11, BOLD), borderwidth=3, pady=3, padx=5, command=lambda a="back":Methods.Mouth_type(a))
 ToolsButton8_1.pack(fill=X)
 
 LabelFR8 = Frame(Mouth_typeFR)
@@ -522,7 +603,7 @@ Label8.pack(fill=X)
 
 RightFR8 = Frame(Mouth_typeFR)
 RightFR8.pack(side=LEFT)
-ToolsButton8_2 = Button(RightFR8, text="Next", font=("Courier New", 11, BOLD), borderwidth=3, pady=1, padx=5, command=lambda a="next":Methods.Mouth_type(a))
+ToolsButton8_2 = Button(RightFR8, text="Next", font=("Courier New", 11, BOLD), borderwidth=3, pady=3, padx=5, command=lambda a="next":Methods.Mouth_type(a))
 ToolsButton8_2.pack(fill=X)
 
 #-Eye type
@@ -536,7 +617,7 @@ Description9.pack(fill=X)
 
 LeftFR9 = Frame(Eye_typeFR)
 LeftFR9.pack(side=LEFT)
-ToolsButton9_1 = Button(LeftFR9, text="Back", font=("Courier New", 11, BOLD), borderwidth=3, pady=1, padx=5, command=lambda a="back":Methods.Eye_type(a))
+ToolsButton9_1 = Button(LeftFR9, text="Back", font=("Courier New", 11, BOLD), borderwidth=3, pady=3, padx=5, command=lambda a="back":Methods.Eye_type(a))
 ToolsButton9_1.pack(fill=X)
 
 LabelFR9 = Frame(Eye_typeFR)
@@ -546,7 +627,7 @@ Label9.pack(fill=X)
 
 RightFR9 = Frame(Eye_typeFR)
 RightFR9.pack(side=LEFT)
-ToolsButton9_2 = Button(RightFR9, text="Next", font=("Courier New", 11, BOLD), borderwidth=3, pady=1, padx=5, command=lambda a="next":Methods.Eye_type(a))
+ToolsButton9_2 = Button(RightFR9, text="Next", font=("Courier New", 11, BOLD), borderwidth=3, pady=3, padx=5, command=lambda a="next":Methods.Eye_type(a))
 ToolsButton9_2.pack(fill=X)
 
 #-Eyebrow type
@@ -560,7 +641,7 @@ Description10.pack(fill=X)
 
 LeftFR10 = Frame(Eyebrow_typeFR)
 LeftFR10.pack(side=LEFT)
-ToolsButton10_1 = Button(LeftFR10, text="Back", font=("Courier New", 11, BOLD), borderwidth=3, pady=1, padx=5, command=lambda a="back":Methods.Eyebrow_type(a))
+ToolsButton10_1 = Button(LeftFR10, text="Back", font=("Courier New", 11, BOLD), borderwidth=3, pady=3, padx=5, command=lambda a="back":Methods.Eyebrow_type(a))
 ToolsButton10_1.pack(fill=X)
 
 LabelFR10 = Frame(Eyebrow_typeFR)
@@ -570,22 +651,128 @@ Label10.pack(fill=X)
 
 RightFR10 = Frame(Eyebrow_typeFR)
 RightFR10.pack(side=LEFT)
-ToolsButton10_2 = Button(RightFR10, text="Next", font=("Courier New", 11, BOLD), borderwidth=3, pady=1, padx=5, command=lambda a="next":Methods.Eyebrow_type(a))
+ToolsButton10_2 = Button(RightFR10, text="Next", font=("Courier New", 11, BOLD), borderwidth=3, pady=3, padx=5, command=lambda a="next":Methods.Eyebrow_type(a))
 ToolsButton10_2.pack(fill=X)
 
 #-Nose type
-i = 1
+#* Prepared for more Nose_type variants in the future updates of py-avataaars *
+#Nose_typeFR = Frame(InterfaceFR)
+#Nose_typeFR.pack(side=TOP)
+
+#DescriptionFR11 = Frame(Nose_typeFR)
+#DescriptionFR11.pack(side=LEFT)
+#Description11 = Label(DescriptionFR11, text="Nose type:", font=("Courier New", 12, BOLD), width=20)
+#Description11.pack(fill=X)
+
+#LeftFR11 = Frame(Nose_typeFR)
+#LeftFR11.pack(side=LEFT)
+#ToolsButton11_1 = Button(LeftFR11, text="Back", font=("Courier New", 11, BOLD), borderwidth=3, pady=3, padx=5, command=lambda a="back":Methods.Nose_type(a))
+#ToolsButton11_1.pack(fill=X)
+
+#LabelFR11 = Frame(Nose_typeFR)
+#LabelFR11.pack(side=LEFT)
+#Label11 = Label(LabelFR11, text=custom_nose_type, font=("Courier New", 12, BOLD), width=17)
+#Label11.pack(fill=X)
+
+#RightFR11 = Frame(Nose_typeFR)
+#RightFR11.pack(side=LEFT)
+#ToolsButton11_2 = Button(RightFR11, text="Next", font=("Courier New", 11, BOLD), borderwidth=3, pady=3, padx=5, command=lambda a="next":Methods.Nose_type(a))
+#ToolsButton11_2.pack(fill=X)
 
 #-Accessories type
-i = 1
+Accessories_typeFR = Frame(InterfaceFR)
+Accessories_typeFR.pack(side=TOP)
+
+DescriptionFR12 = Frame(Accessories_typeFR)
+DescriptionFR12.pack(side=LEFT)
+Description12 = Label(DescriptionFR12, text="Accessories type:", font=("Courier New", 12, BOLD), width=20)
+Description12.pack(fill=X)
+
+LeftFR12 = Frame(Accessories_typeFR)
+LeftFR12.pack(side=LEFT)
+ToolsButton12_1 = Button(LeftFR12, text="Back", font=("Courier New", 11, BOLD), borderwidth=3, pady=3, padx=5, command=lambda a="back":Methods.Accessories_type(a))
+ToolsButton12_1.pack(fill=X)
+
+LabelFR12 = Frame(Accessories_typeFR)
+LabelFR12.pack(side=LEFT)
+Label12 = Label(LabelFR12, text=custom_accessories_type, font=("Courier New", 12, BOLD), width=17)
+Label12.pack(fill=X)
+
+RightFR12 = Frame(Accessories_typeFR)
+RightFR12.pack(side=LEFT)
+ToolsButton12_2 = Button(RightFR12, text="Next", font=("Courier New", 11, BOLD), borderwidth=3, pady=3, padx=5, command=lambda a="next":Methods.Accessories_type(a))
+ToolsButton12_2.pack(fill=X)
 
 #-Clothe type
-i = 1
+Clothe_typeFR = Frame(InterfaceFR)
+Clothe_typeFR.pack(side=TOP)
+
+DescriptionFR13 = Frame(Clothe_typeFR)
+DescriptionFR13.pack(side=LEFT)
+Description13 = Label(DescriptionFR13, text="Clothe type:", font=("Courier New", 12, BOLD), width=20)
+Description13.pack(fill=X)
+
+LeftFR13 = Frame(Clothe_typeFR)
+LeftFR13.pack(side=LEFT)
+ToolsButton13_1 = Button(LeftFR13, text="Back", font=("Courier New", 11, BOLD), borderwidth=3, pady=3, padx=5, command=lambda a="back":Methods.Clothe_type(a))
+ToolsButton13_1.pack(fill=X)
+
+LabelFR13 = Frame(Clothe_typeFR)
+LabelFR13.pack(side=LEFT)
+Label13 = Label(LabelFR13, text=custom_clothe_type, font=("Courier New", 12, BOLD), width=17)
+Label13.pack(fill=X)
+
+RightFR13 = Frame(Clothe_typeFR)
+RightFR13.pack(side=LEFT)
+ToolsButton13_2 = Button(RightFR13, text="Next", font=("Courier New", 11, BOLD), borderwidth=3, pady=3, padx=5, command=lambda a="next":Methods.Clothe_type(a))
+ToolsButton13_2.pack(fill=X)
 
 #-Clothe color
-i = 1
+Clothe_colorFR = Frame(InterfaceFR)
+Clothe_colorFR.pack(side=TOP)
+
+DescriptionFR14 = Frame(Clothe_colorFR)
+DescriptionFR14.pack(side=LEFT)
+Description14 = Label(DescriptionFR14, text="Clothe color:", font=("Courier New", 12, BOLD), width=20)
+Description14.pack(fill=X)
+
+LeftFR14 = Frame(Clothe_colorFR)
+LeftFR14.pack(side=LEFT)
+ToolsButton14_1 = Button(LeftFR14, text="Back", font=("Courier New", 11, BOLD), borderwidth=3, pady=3, padx=5, command=lambda a="back":Methods.Clothe_color(a))
+ToolsButton14_1.pack(fill=X)
+
+LabelFR14 = Frame(Clothe_colorFR)
+LabelFR14.pack(side=LEFT)
+Label14 = Label(LabelFR14, text=custom_clothe_color, font=("Courier New", 12, BOLD), width=17)
+Label14.pack(fill=X)
+
+RightFR14 = Frame(Clothe_colorFR)
+RightFR14.pack(side=LEFT)
+ToolsButton14_2 = Button(RightFR14, text="Next", font=("Courier New", 11, BOLD), borderwidth=3, pady=3, padx=5, command=lambda a="next":Methods.Clothe_color(a))
+ToolsButton14_2.pack(fill=X)
 
 #-Clothe graphic type
-i = 1
+Clothe_graphic_typeFR = Frame(InterfaceFR)
+Clothe_graphic_typeFR.pack(side=TOP)
+
+DescriptionFR15 = Frame(Clothe_graphic_typeFR)
+DescriptionFR15.pack(side=LEFT)
+Description15 = Label(DescriptionFR15, text="Clothe graphic type:", font=("Courier New", 12, BOLD), width=20)
+Description15.pack(fill=X)
+
+LeftFR15 = Frame(Clothe_graphic_typeFR)
+LeftFR15.pack(side=LEFT)
+ToolsButton15_1 = Button(LeftFR15, text="Back", font=("Courier New", 11, BOLD), borderwidth=3, pady=3, padx=5, command=lambda a="back":Methods.Clothe_graphic_type(a))
+ToolsButton15_1.pack(fill=X)
+
+LabelFR15 = Frame(Clothe_graphic_typeFR)
+LabelFR15.pack(side=LEFT)
+Label15 = Label(LabelFR15, text=custom_clothe_graphic_type, font=("Courier New", 12, BOLD), width=17)
+Label15.pack(fill=X)
+
+RightFR15 = Frame(Clothe_graphic_typeFR)
+RightFR15.pack(side=LEFT)
+ToolsButton15_2 = Button(RightFR15, text="Next", font=("Courier New", 11, BOLD), borderwidth=3, pady=3, padx=5, command=lambda a="next":Methods.Clothe_graphic_type(a))
+ToolsButton15_2.pack(fill=X)
 
 mainWin.mainloop()
