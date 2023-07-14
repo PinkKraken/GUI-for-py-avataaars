@@ -11,7 +11,7 @@ Original repository: <a href="https://github.com/kebu/py-avataaars" target="_bla
 
 <h1>Installation and using - python-script version</h1>
 
-<b><h3>&nbsp;&nbsp;&nbsp;>> I also plan to make an executable for people without python installed in the future. <<</h3></b>
+<b><h3>&nbsp;&nbsp;&nbsp;>> I also plan to make an executable for people without python installed in the future.</h3></b>
 
 <ul>
 <li>You must have a working <b>python3</b> installation and install <b>py-avataaars</b> using pip (see the <a href="https://github.com/kebu/py-avataaars" target="_blanc">py-avataaars repository</a> for further instructions)</li>
