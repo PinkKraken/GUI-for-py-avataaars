@@ -28,7 +28,7 @@ Original repository: <a href="https://github.com/kebu/py-avataaars" target="_bla
 <li>With this version there is no need for Python installation</li>
 <li>You will need to install the <b>GTK3 libraries</b> - the installer for the <b>MS Windows version</b> can be found in the root folder</li>
 <li>Download the <b>"GUI-FOR-PY-AVATAAARS 1.0.0E"</b> folder and move it where you want</li>
-<li>You can run the <b>GUI-for-py-avataaars_1.0.0.exe</b>directly from the folder or make shortcut to it</li>
+<li>You can run the <b>GUI-for-py-avataaars_1.0.0.exe</b> directly from the folder or make shortcut to it</li>
 <li>Please leave the original EXE file next to <b>py_avataaars</b> folder :-)</li>
 </ul>
 <br><br>
