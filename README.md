@@ -34,4 +34,8 @@ Original repository: <a href="https://github.com/kebu/py-avataaars" target="_bla
 <br><br>
 
 
+<<<<<<< HEAD
 <h3>I know it's really simple tool, but that was part of the idea. It is versatile and flexible for different applications.</h3>
+=======
+<h3>I know it's really simple tool, but that was part of the idea. It is versatile and flexible for different applications.</h3>
+>>>>>>> bf036d514df8ab728ffd3fe55f82cf7aee231322
