@@ -6,7 +6,7 @@ from collections import Counter
 from io import BytesIO
 
 from cairosvg import svg2png
-from jinja2 import Environment, PackageLoader # PackageLoader => FileSystemLoader due to PyInstaller problem with compilation
+from jinja2 import Environment, FileSystemLoader # PackageLoader => FileSystemLoader due to PyInstaller problem with compilation
 from jinja2.ext import Extension
 from jinja2.lexer import Token
 
@@ -302,7 +302,7 @@ class PyAvataaar(object):
 
     def __render_svg(self):
         env = Environment(
-            loader=PackageLoader('py_avataaars', 'templates'), # PackageLoader('py_avataaars', 'templates') => FileSystemLoader('py_avataaars\\templates') due to PyInstaller problem with compilation
+            loader=FileSystemLoader('py_avataaars\\templates'), # PackageLoader('py_avataaars', 'templates') => FileSystemLoader('py_avataaars\\templates') due to PyInstaller problem with compilation
             trim_blocks=True,
             lstrip_blocks=True,
             autoescape=True,
